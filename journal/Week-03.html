@@ -47,9 +47,12 @@
 
     <h2>The data</h2>
     <p>
-      I used the popultaion density layer with 2020 data and night light layer with 2024 data. 
-      The night light data is collected by VIIRS, the population data is from UK Population Charity Population Matters. 
-      There's a time gap between the information of the 2 layers. And this does not show more detailed relationship between population and night light, leaving a problem that does this two factors really have a positive relationship. (I didn't use AI in the process)
+      Product Name:  France_RGEALTI_DTM1m
+      Pixel Size: 1 metre
+      Vertical Datum:  NGF-IGN69
+      LE90: 0.20m
+      Date start: 2009.1.1
+      Date end: 2022.12.31
     </p>
     <p>
       Write the proxy sentence here, once per indicator:
@@ -58,9 +61,11 @@
 
     <h2>The method</h2>
     <p>
-      What you actually did, in enough detail that someone else could repeat
-      it. Which base layer, which overlay, roughly what zoom, and where you set
-      the opacity. If you chose a threshold or a year, say why you chose it.
+      The first part is adding layer by searching in "living Altas". Layer of "terrain", "terrain-slope degrees", "terrain-slopemap", "World elevation coverage map", terrain -dark multi-direcional hilshade" and "world soils 250m soil organic carbon" were added in order on the map. 
+      Next step is reading data via the layers. To see every detailed information clearly and not get confused with different layers, I turned on layers one by one, by clicking the "eye" button. For example, leaving the "Terrain-slope degrees" only, you can see the map covered with black-gray-white color, showing the slope degrees from high to low through the color of light to dark. Click anywhere on your map, you can get mumeric data for that very region. 
+      Fianlly, I tried to change some parameters to adjust the look of the layers. An important parameter is the "transparency", I changed it to around 23% so that I can see the adminastrative boundaries of my site and the terrain at the same time.
+      Especailly, for the "terrain slope degrees", opening Styles on the Settings toolbar, I narrowed the range so that the full colour ramp is squeezed into the slopes that actually occur at my site. Then, I selected "Classify -> Style options -> Manual breaks -> set Number of classes", and set 6 breaks for the slope, and then raise the maximum slope from the origin 16 to 27, set the breaks at 0,1,4,8 and 16.( The breaks of 0,1,4,and 8 are the original breaks so I keep it. And 16 is the origianl limit, as the difference of 16 to 27 is 11, the value is appropriate so I set it as a new break.)
+      At last, all the layers are ready, I can adjust any parameters to meet my research oor observation goals.
     </p>
 
     <!-- ============================================================
@@ -96,9 +101,7 @@
         Also the vertical uncertainty is 0.20m, which is enough to create elevation error. 
       </p>
       <p>
-        <strong>AI use:</strong> AI-assisted for [what], using [which tool].
-        I verified [how]. If you did not use AI, write "No AI tools were used
-        for this entry."
+        <strong>AI use:</strong>  "No AI tools were used for this entry."
       </p>
     </div>
 
@@ -110,7 +113,7 @@
 
 <footer class="site-foot">
   <div class="wrap wrap-narrow">
-    <p>Your Name · SOCS-SHU 289 · NYU Shanghai · Fall 2026</p>
+    <p>Jingjun Zhao · SOCS-SHU 289 · NYU Shanghai · Fall 2026</p>
   </div>
 </footer>
 
