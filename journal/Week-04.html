@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Week 04 · Jingjun Zhao</title>
+
+<!-- Note the ../ — this page is inside the journal folder, so it has to
+     look one level up to find the stylesheet. -->
+<link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="../index.html">Jingjun Zhao</a>
+    <nav>
+      <a href="../index.html">Home</a>
+      <a href="../index.html#journal">Journal</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<article class="entry">
+  <div class="wrap wrap-narrow">
+
+    <p class="kicker">Week 03 · September 2026</p>
+
+    <!-- EDIT THIS: a title that says what you found, not what you did.
+         "The blocks that were built after the creek was filled" beats
+         "Week 1 journal entry". -->
+    <h1>Green</h1>
+
+    <!-- ============================================================
+         The six parts. Every entry in this course has all six.
+         Do not delete a heading — if a section is thin, that is
+         information too.
+         ============================================================ -->
+
+    <h2>The question</h2>
+    <p>
+      To what extent does NDVI green‑pattern across three major Paris urban parks correspond to actual on‑site ecological density of habitat?
+    </p>
+
+    <h2>The data</h2>
+    <p>
+      Sensor: Landsat 8, Landsat 9
+      spatial resolution: 30 m per pixel
+      Scene acquired 10/03/2026 cloud cover 18% (additional reference scene: 09/25/2026)
+      The vegetation index used is NDVI (Normalized Difference Vegetation Index), calculated from Band 4 (red) and Band 5 (near‑infrared). 
+      Data source: Esri Multispectral Landsat image service from ArcGIS Living Atlas(this service operates under an open token‑free licence supporting anonymous web access.)
+    </p>
+    <p>
+      Write the proxy sentence here, once per indicator:
+      <em>I am using X to stand for Y, and it might fail because Z.</em>
+    </p>
+
+    <h2>The method</h2>
+    <p>
+      In ArcGIS Online Map Viewer I applied the NDVI Colorized processing template for visual rendering. 
+      In Landsat Explorer I set an index mask threshold range 0.5‑1.0. This threshold was chosen on intuitive grounds: values above 0.5 were treated as “green vegetation”, with no pre‑existing scientific justification for this cut‑off value. 
+      I sampled NDVI pixel values for three named park sites: Bois de Vincennes, Parc des Buttes‑Chaumont, and Parc de Sceaux. 
+      I also sampled a nearby sports‑stadium artificial grass pitch as a high‑index test location.
+    </p>
+
+    <!-- ============================================================
+         YOUR EVIDENCE
+
+         WEEK 1: a screenshot from the Site Scanner. Upload it into this
+         journal folder (Add file → Upload files) and change the src
+         below to your filename, for example src="scanner-01.png".
+
+         FROM WEEK 2, once ArcGIS Online is live: publish your web map,
+         choose Share → Embed, delete the <img> line, remove the <!-- and
+         --> around the iframe, and paste your address in.
+         ============================================================ -->
+    <figure>
+      <iframe width="700" height="600" allow="local-network-access; geolocation" title="Tutorial 3 · Green · Jingjun Zhao_3" src="https://nyuds.maps.arcgis.com/apps/mapviewer/index.html?configurableview=true&webmap=2cf56835f3eb4fd98d0763d577bfe8a9&theme=light&heading=true&legend=true&share=true&scroll=false&basemaps=true&center=21.090255092768583,51.47324797362081&scale=36978595.474472" ></iframe>
+         <figcaption>
+        A caption that says what to look at. Not "Figure 1" — tell the reader
+        where their eye should go, and what it means.
+      </figcaption>
+    </figure>
+
+    <h2>What I found</h2>
+    <p>
+      My high‑index, low‑habitat location is the large irrigated sports‑stadium grass pitch beside Autoroute de l’Est, with sampled NDVI value 0.555. Although the index registers strong greenness, this manicured sports turf supports almost no native wildlife habitat.
+      Among my three pre‑selected parks: Bois de Vincennes scores NDVI 0.698; Parc des Buttes‑Chaumont scores NDVI 0.650; Parc de Sceaux scores NDVI 0.564.
+    </p>
+
+    <h2>What this does not show</h2>
+    <div class="limits">
+      <p>
+        I am using NDVI values to represent how good an area is as wildlife habitat, and this proxy can be wrong because well‑watered, closely‑cut sports grass can get fairly high NDVI numbers, much like park greenery. Yet this sports grass gives almost nowhere for local wild species to live.
+        This NDVI reading only shows light reflected off leaves on 25 September 2026 and October 3rd 2026. It cannot tell the difference between heavily maintained grass and more diverse park woodland. It also tells us nothing about the plants and animals living under the tree canopy, what species are present, or how well habitats connect to each other.
+      </p>
+      <p>
+        <strong>AI use:</strong>  No AI tools were used for this entry.
+      </p>
+    </div>
+
+    <a class="back" href="../index.html#journal">← Back to all entries</a>
+
+  </div>
+</article>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap wrap-narrow">
+    <p>Jingjun Zhao · SOCS-SHU 289 · NYU Shanghai · Fall 2026</p>
+  </div>
+</footer>
+
+</body>
+</html>
