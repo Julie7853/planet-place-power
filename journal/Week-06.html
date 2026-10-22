@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Week 05 · Jingjun Zhao</title>
+<title>Week 06 · Jingjun Zhao</title>
 
 <!-- Note the ../ — this page is inside the journal folder, so it has to
      look one level up to find the stylesheet. -->
@@ -32,7 +32,7 @@
     <!-- EDIT THIS: a title that says what you found, not what you did.
          "The blocks that were built after the creek was filled" beats
          "Week 1 journal entry". -->
-    <h1>Water</h1>
+    <h1>Land Use for Now and Then</h1>
 
     <!-- ============================================================
          The six parts. Every entry in this course has all six.
@@ -42,32 +42,25 @@
 
     <h2>The question</h2>
     <p>
-      Where does the runoff from my Paris site flow, and where does the drinking water supply of this site originate? Which actors hold claims over these water resources?
+      What was the land of Paris used for before its major urban change, what pattern did it follow, what has it become, and how has the distribution of benefits from this transformation worked out for different groups?
     </p>
 
     <h2>The data</h2>
     <p>
-      Watershed catchment layer: Global Watersheds tool, MERIT‑Hydro (2021) and HydroSHEDS (2013), low/high precision modes, open-source, no license restriction.
-      Aqueduct 4.0 Water Risk layer: World Resources Institute (WRI), CC BY 4.0 license, baseline period 1979–2019, data vintage April 2023. The water stress value is calculated at the HydroBASINS Level 6 sub-basin scale. The value displayed on the map is fixed for the full hydrological sub-basin, even when the polygon has been split by French administrative boundaries.
+      Sentinel-2 10m Land Use/Land Cover Time Series, Esri and Impact Observatory, 1:37795, 1px=10m, 2017-2024(2024 was the Paris Olympic year)2020as the third year because of the start of the pandemic. Esri MLA with the source data CC BY 4.0.
     </p>
     <p>
-      I am using the delineated catchment boundary at my site to stand for where my site’s water actually goes and comes from, and it might fail because the routine has no representation of pipes, so it describes rain on the roof and not the tap water supply.
-      I am using baseline water stress for my basin to stand for whether water at my site is adequate, and it might fail because it counts total available renewable volume, so water that is present but polluted and unusable still counts as supply.
+     
       <em>I am using X to stand for Y, and it might fail because Z.</em>
     </p>
 
     <h2>The method</h2>
     <p>
-      I delineated the catchment using MERIT‑Hydro and HydroSHEDS datasets in Global Watersheds website, switching between low and high precision settings. 
-      With higher precision, the snap distance is 73.38metres. The area of the watershed is still 44000 square kilometres. 
-      With data source of HydroSHEDS (2013) and lower precision, the area is still 44000 square of kilometres, remains no change. And the snap distance is approximately 9.52km
-      Area(sqkm):1090 Baselin water stress(data value)0.13, Baseline water stress(class)Low-Medium10-20%
-我的点位：57 Bd Saint-Germain(one building of NYU Paris) area: 1858sqm the ratio is 586652.31
-Term of Use: Creative Commons Attribution 4.0 International
-来源标注：Aqueduct 4.0, World Resources Institute
-Polygon besides my site: Area(sqkm):1475.19 Baselin water stress(data value)0.05, Baseline water stress(class)Low<10%
-流域：9-10 polygons, cross provincials
-Baseline monthly 0.27Sep(Medium-High);0.04March
+     What Stay Constant:
+         extent 1px=10
+         scale  
+         rendering
+         class choosen:Built
     </p>
 
     <!-- ============================================================
@@ -82,8 +75,7 @@ Baseline monthly 0.27Sep(Medium-High);0.04March
          --> around the iframe, and paste your address in.
          ============================================================ -->
     <figure>
-      <iframe width="600" height="500" src="https://mghydro.com/app/shared/22ED30"></iframe>
-      <iframe width="700" height="600" allow="local-network-access; geolocation" title="Tutorial 4 · Water · Jingjun Zhao" src="https://nyuds.maps.arcgis.com/apps/mapviewer/index.html?configurableview=true&webmap=f776da3e62824da19a69b10f089195d9&theme=light&heading=true&legend=true&share=true&scroll=false&basemaps=true&center=2.163165529419252,48.77221776351864&scale=1155581.108577" ></iframe>
+      https://livingatlas.arcgis.com/landcoverexplorer/#mapCenter=2.34698%2C48.85031%2C13.95&mode=swipe&timeExtent=2017%2C2025&landCover=Built+Area
          <figcaption>
         A caption that says what to look at. Not "Figure 1" — tell the reader
         where their eye should go, and what it means.
@@ -92,18 +84,19 @@ Baseline monthly 0.27Sep(Medium-High);0.04March
 
     <h2>What I found</h2>
     <p>
-     The engineered drinking water pipeline network serving Paris crosses the hydrological divide: it transports raw water from reservoirs and intake points outside the surface catchment to the urban site, flowing toward the city for municipal supply.
-     My three delineations from different precision/dataset settings produced highly consistent catchment areas around 44000 sqkm. This consistency matches expectations from the local geography: the Seine basin has clear, stable topographic divides, so different elevation datasets agree on the watershed boundary. 
-     My initial hand estimate of 10000 sqkm drastically underestimated the real basin scale.
+     Within central Paris, small scattered patches classified as Trees in 2017 have shifted to Built Area by 2024.
+     I suspect that some remaining tree cover in this dataset belongs to private, restricted-access green space rather than publicly accessible parks, and this land cover layer cannot tell the difference.
     </p>
 
     <h2>What this does not show</h2>
     <div class="limits">
       <p>
-        Between the two proxies, the water stress index carries greater risk.The catchment boundary is precise for surface rainfall runoff: it reliably answers the narrow question “where does rooftop rainwater flow?” Its limits are clear and confined to drinking-water supply. The water stress index, by contrast, invites readers to make broad claims about local water availability for residents, even though the statistic is averaged over an enormous sub-basin, ignores water quality, and hides large monthly seasonal variation behind a single annual summary value. This mismatch between what the map visually appears to claim and what the data actually measures is more likely to mislead interpretation.
+        Land cover classification is a proxy for accessible urban green space, where Z = spectral signature confusion limits the classifier’s ability to separate open public tree canopy from vegetation on private enclosed sites.
       </p>
       <p>
-        <strong>AI use:</strong>  AI assisted with structuring this journal entry. Catchment testing, data recording, comparison between proxies, and field reasoning for the Paris site were completed independently.
+        <strong>AI use:</strong>  AI-assisted for drafting the visible and suspected change descriptions, using Doubao.
+           I verified it by cross-checking against the Esri Sentinel‑2 Land Cover Explorer swipe map for Paris and confirming alignment with the dataset’s classification rules.
+           The map observation, the suspected unshown pattern, and the final proxy sentence are my own.
       </p>
     </div>
 
