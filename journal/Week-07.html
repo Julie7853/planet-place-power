@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Week 07 · Jingjun Zhao</title>
+
+<!-- Note the ../ — this page is inside the journal folder, so it has to
+     look one level up to find the stylesheet. -->
+<link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="../index.html">Jingjun Zhao</a>
+    <nav>
+      <a href="../index.html">Home</a>
+      <a href="../index.html#journal">Journal</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<article class="entry">
+  <div class="wrap wrap-narrow">
+
+    <p class="kicker">Week 03 · September 2026</p>
+
+    <!-- EDIT THIS: a title that says what you found, not what you did.
+         "The blocks that were built after the creek was filled" beats
+         "Week 1 journal entry". -->
+    <h1>Countries and Export</h1>
+
+    <!-- ============================================================
+         The six parts. Every entry in this course has all six.
+         Do not delete a heading — if a section is thin, that is
+         information too.
+         ============================================================ -->
+
+    <h2>The question</h2>
+    <p>
+      Does Paris's physical geography and transport infrastructure play a significant role in France's aerospace exports?
+    </p>
+
+    <h2>The data</h2>
+    <p>
+      File 1 The Atlas of Economic Complexity
+      1. Source:UN Comtrade goods data and IMF economic indicators, reconciled by the Growth Lab’s own method.
+      2. Year:2024
+      3. Classification: Harmonized System HS92
+      4. Unit:USD
+      5. The Atlas uses data from the following international organizations as inputs into its comprehensive methodology:
+      1)Goods Trade: United Nations Statistical Division (UN Comtrade)
+      2)Services Trade: International Monetary Fund, Direction of Trade Statistics (DOTS)
+      3)Economic Indicators: International Monetary Fund, World Economic Outlook (WEO)
+      4)Price Adjustments: Federal Reserve Economic Data (FRED), Producer Price Index for Industrial Commodities
+      File 2 Country Boundaries
+      Source: Natural Earth, Admin0-Countries, 1:110m Cultural Vectors Version 5.1.1
+      Scale:1:110m, intended for small scale maps and global overviews
+      Licence: Public domains
+    </p>
+    <p>
+     
+      <em>I am using X to stand for Y, and it might fail because Z.</em>
+    </p>
+
+    <h2>The method</h2>
+    <p>
+     Join fields
+Target layer (Natural Earth): admin
+Join layer (France export data): country
+Join type and rationale
+I used a left join, with ne_10m_admin_0_countries2 as the target layer and France_export_usd_2024 as the join layer. The join was made using admin and country, respectively.
+    </p>
+
+    <!-- ============================================================
+         YOUR EVIDENCE
+
+         WEEK 1: a screenshot from the Site Scanner. Upload it into this
+         journal folder (Add file → Upload files) and change the src
+         below to your filename, for example src="scanner-01.png".
+
+         FROM WEEK 2, once ArcGIS Online is live: publish your web map,
+         choose Share → Embed, delete the <img> line, remove the <!-- and
+         --> around the iframe, and paste your address in.
+         ============================================================ -->
+    <figure>
+      <iframe width="700" height="600" allow="local-network-access; geolocation" title="France_Export_2024" src="https://nyuds.maps.arcgis.com/apps/mapviewer/index.html?configurableview=true&webmap=cb6359da092b4dd7ad1790086a536c83&theme=light&heading=true&legend=true&share=true&scroll=false&basemaps=true&center=34.78782365721755,41.03111975791579&scale=73957190.948944" ></iframe>
+         <figcaption>
+        Look at the 3 red points on the map
+      </figcaption>
+    </figure>
+
+    <h2>What I found</h2>
+    <p>
+     Within central Paris, small scattered patches classified as Trees in 2017 have shifted to Built Area by 2024.
+     I suspect that some remaining tree cover in this dataset belongs to private, restricted-access green space rather than publicly accessible parks, and this land cover layer cannot tell the difference.
+    </p>
+
+    <h2>What this does not show</h2>
+    <div class="limits">
+      <p>
+        Land cover classification is a proxy for accessible urban green space, where Z = spectral signature confusion limits the classifier’s ability to separate open public tree canopy from vegetation on private enclosed sites.
+      </p>
+      <p>
+        <strong>AI use:</strong>  AI-assisted for drafting the visible and suspected change descriptions, using Doubao.
+           I verified it by cross-checking against the Esri Sentinel‑2 Land Cover Explorer swipe map for Paris and confirming alignment with the dataset’s classification rules.
+           The map observation, the suspected unshown pattern, and the final proxy sentence are my own.
+      </p>
+    </div>
+
+    <a class="back" href="../index.html#journal">← Back to all entries</a>
+
+  </div>
+</article>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap wrap-narrow">
+    <p>Jingjun Zhao · SOCS-SHU 289 · NYU Shanghai · Fall 2026</p>
+  </div>
+</footer>
+
+</body>
+</html>
